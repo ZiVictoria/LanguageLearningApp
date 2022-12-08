@@ -1,2 +1,28 @@
 @import '../../styles/vars.scss';
 
+.button{
+    cursor: pointer;
+    height: 30px;
+    background-color: #FD5D5D;
+    width: 30px;
+	border-radius: 6px;
+    border: 1px solid #0D4C92;
+    margin: 2px;
+    &:first-child{
+        width: 50px;
+        background-color: #F8F988;
+        &:hover{
+            background-color: #f1f42f;
+        }
+    }
+    &:hover{
+        background-color: #fc3434;
+    }
+}
+
+.btnJoin{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: #0D4C92;
+}

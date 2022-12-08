@@ -3,21 +3,40 @@
 .container{
     width: 100vw;
     height: 100vh;
-    display: flex;
     background-color: $main-page-color;
-    align-items: center;
     color: $headers-font-color;
+    padding-top: 3%;
 }
 
-.logo {
-    width: 30%;
+.header{
+    width: 90%;
+	margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 10%;
+}
 
-    .img {
-        width: 45%;
-        height: 60%;
-        margin: 3% 0;
+.logo{
+    flex-basis: 20%;
+    margin-left: 3%;
+    &_img{
+        width: 70px;
+        height: 60px;
+    }
+}
+
+.nav{
+    justify-content: space-between;
+    flex-grow: 1;
+    align-self: center;
+    .links{
+        color: $header-font-color;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        cursor: pointer;
+        letter-spacing: 0.2em;
+        li:hover{
+            color: #F9F9F9;
+        }
     }
 }

@@ -1,0 +1,23 @@
+@import '../../styles/vars.scss';
+
+.table{
+    display: grid;
+    padding-top: 3%;
+    text-align: center;
+    background-color: $pages-color;
+
+    &__row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 2%;
+    }
+    &__title{
+        font-size: 1.5em;
+        color: $header-font-color;
+    }
+    &__word{
+        font-size: 1em;
+        color: $font-color;
+    }
+
+}
