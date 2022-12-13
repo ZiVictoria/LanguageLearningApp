@@ -22,7 +22,15 @@
 
 .btnJoin{
     cursor: pointer;
-    width: 100px;
-    height: 40px;
-    background-color: #0D4C92;
+    width: 11vw;
+    height: 9vh;
+    background-color: #40776d;
+    transition: 0.5s;
+    border: 1px solid black;
+    font-size: 1.2vw;
+    border-radius: 6px;
+    &:hover{
+        background-color: #35635a;
+        color: whitesmoke;
+    }
 }

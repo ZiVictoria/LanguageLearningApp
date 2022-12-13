@@ -1,26 +1,29 @@
 @import '../../styles/vars.scss';
 
-.container{
-    width: 100vw;
-    height: 100vh;
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
     background-color: $main-page-color;
-    color: $headers-font-color;
-    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    color: $header-font-color;
 }
 
 .header{
-    width: 90%;
-	margin: 0 auto;
     display: flex;
-    gap: 10%;
-}
-
-.logo{
-    flex-basis: 20%;
-    margin-left: 3%;
-    &_img{
-        width: 70px;
-        height: 60px;
+    gap: 20%;
+    padding: 3% 0 5%;
+    .logo{
+        flex-basis: 20%;
+        &_img{
+            width: 5vw;
+            height: 10vh;
+        }
     }
 }
 
@@ -30,13 +33,59 @@
     align-self: center;
     .links{
         color: $header-font-color;
+        font-size: 1.2vw;
         display: flex;
         justify-content: space-around;
         list-style-type: none;
+        align-items: center;
         cursor: pointer;
         letter-spacing: 0.2em;
+        gap: 30px;
         li:hover{
-            color: #F9F9F9;
+            color: #40776d;
+        }
+        .active{
+            display: inline-block;
+            border-bottom: 1px solid #333333;
+            border-top: 1px solid #333333;
+            padding: 7px 12px;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
+}
+
+.heading{
+    display: grid;
+	grid-template-columns: 1fr 57%;
+    gap: 3em;
+    margin-top: 5%;
+    // margin-bottom: 5%;
+    .cover{
+        display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+    }
+    .image{
+        grid-row: 1/2;
+    }
+    .img{
+        max-width: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .quote{
+        font-size: 3vw;
+        line-height: 1.5;
+		letter-spacing: 0.08em;
+        font-weight: 600;
+    }
+    .text{
+        font-size: 1.5vw;
+        line-height: 1.7;
+		letter-spacing: 0.08em;
+    }
+
 }

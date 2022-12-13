@@ -7,10 +7,7 @@ export default function Button (props) {
     }
     return ( 
     
-        <button onClick={onClick} className={props.class}>{props.text}</button>
-    
+        <button onClick={onClick} className={props.class}>{props.text}</button>    
     );
 }
-
-
 
