@@ -1,13 +1,12 @@
-import { useState } from "react";
 import style from '../Card/card.module.scss';
 
 
 function Card (props) {
-    const [clicked, setClick] = useState(props.clicked || false);
-    
-    const handleClick = () => {
-        setClick(true);
-    }
+const {clicked, setClick} = props;
+
+const handleClick = () => {
+    setClick(true);
+}
 
     return (
         <div>
