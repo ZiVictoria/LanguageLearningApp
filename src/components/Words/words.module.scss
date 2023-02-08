@@ -4,8 +4,6 @@
 .table{
     display: grid;
     text-align: center;
-    background-color: $pages-color;
-
     &__row{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;

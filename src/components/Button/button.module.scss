@@ -24,13 +24,12 @@
     cursor: pointer;
     width: 11vw;
     height: 9vh;
-    background-color: #40776d;
+    background-color: #c8dbbe;
     transition: 0.5s;
     border: 1px solid black;
     font-size: 1.2vw;
     border-radius: 6px;
     &:hover{
-        background-color: #35635a;
-        color: whitesmoke;
+        background-color: #c8dbbe82;        
     }
 }

@@ -9,7 +9,7 @@ const handleClick = () => {
 }
 
     return (
-        <div>
+        <div className={style.about}>
             <div className={style.english}>{props.english}</div>
             <div className={style.transcription}>{props.transcription}</div>
             <div className={style.button}>

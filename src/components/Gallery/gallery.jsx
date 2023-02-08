@@ -3,18 +3,17 @@ import Card from '../Card/card.jsx';
 import datas from '../../data/data.json';
 import style from '../Gallery/gallery.module.scss';
 // import Button from "../Button/button.jsx";
-import styleCont from '../Header/header.module.scss';
 
 
-export default function CardsGallery(props) {
+export default function Gallery() {
     const [count, setCount] = useState(0);
-    const [clicked, setClick] = useState(props.clicked || false);
+    const [clicked, setClick] = useState(false);
 
     function getNextCard() {
         let i = count;
         i++;
         if (i === datas.length) {
-            setCount(1);
+            setCount(0);
 
         } else{
             setCount(i);
@@ -24,18 +23,17 @@ export default function CardsGallery(props) {
 
     function getPreviousCard() {
         let i = count;
-        i--;
-        if (i === -1) {
+        if (i === 0) {
             setCount(datas.length - 1);
 
         } else{
-            setCount(i);
+            setCount(i - 1);
         }
         setClick(false)
     }
 
     return (
-        <div className={styleCont.container}>
+        
             <div className={style.card}>
                 <button onClick ={getPreviousCard} className={style.btn}>Previous</button>
                 <Card
@@ -44,9 +42,10 @@ export default function CardsGallery(props) {
                 transcription={datas[count].transcription}
                 translation = {datas[count].translation}
                 clicked = {clicked}
+                setClick = {setClick}
                 /> 
                 <button onClick={getNextCard} className={style.btn}>Next</button>
             </div>
-        </div>
+     
     );
 }

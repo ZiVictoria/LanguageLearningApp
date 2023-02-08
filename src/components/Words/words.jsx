@@ -4,8 +4,6 @@ import style from '../Words/words.module.scss';
 import Button from '../Button/button.jsx';
 import styleBtn from '../Button/button.module.scss';
 import Input from '../Input/input.jsx';
-import styleCont from '../Header/header.module.scss';
-import wrapper from '../Header/header.module.scss';
 
 export default function ListOfWords() {
     const [isEdit, setIsEdit] = useState();
